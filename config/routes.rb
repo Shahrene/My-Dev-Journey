@@ -9,8 +9,9 @@ Rails.application.routes.draw do
   get "/", to: "pages#home"
   get "/about", to: "pages#about_us"
   get "/profile", to: "pages#profile"
-  post "/profile", to: "pages#profile_show"
-  post "/pages/profile_show", to: "pages#create"
+  post "/profile", to: "pages#create"
+  get "/profile/:id", to: "pages#profile"
+ 
 
   get "/login", to: "session#new"
   get "/signup", to: "session#signup"
