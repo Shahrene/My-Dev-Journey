@@ -10,11 +10,11 @@ class PagesController < ApplicationController
     user.summary = params[:summary]
     user.goals = params[:goals]
     user.employment_status = params[:status]
-    
+
     if user.save
       redirect_to "/profile/#{user.id}"
     else
-      redirect_to '/signup'
+      redirect_to "/signup"
     end
   end
 
@@ -23,7 +23,5 @@ class PagesController < ApplicationController
 
   def show
     user = User.find_by(id: params[:user_id])
-    
   end
-
 end
