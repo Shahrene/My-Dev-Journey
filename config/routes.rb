@@ -8,9 +8,13 @@ Rails.application.routes.draw do
 
   get '/', to: 'pages#home' 
   get '/about', to: 'pages#about_us' 
+  
 
 
   get '/login', to: 'session#new'
+  # post '/login', to: 'session#newuser'
+  get '/signup', to: 'session#signup'
+  post '/signupdetails', to: 'session#signupdetails'
   post '/session', to: 'session#create' 
   delete '/session', to: 'session#destroy' 
 end
