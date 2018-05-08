@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyDevJourney</title>
+    <title>My Dev Journey</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:900" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
+  <header>
+    <a href="/">Home</a>
+      <% if logged_in? %>
+    <a href="/">My Dev Journey</a>
+      <span>logged in as <%= current_user.username %></span>
+      <% end %>
+  </header>
+
   <body>
     <%= yield %>
   </body>
+
+  <footer>
+    <p>&copy Megan, Kasia & Shahrene 2018
+  </footer>
+
 </html>
