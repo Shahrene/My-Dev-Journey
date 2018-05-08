@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   put '/events/:id', to: 'events#update'
 
   get '/', to: 'pages#home' 
+  get '/about', to: 'pages#about_us' 
+
 
   get '/login', to: 'session#new'
   post '/session', to: 'session#create' 
