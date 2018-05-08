@@ -13,3 +13,69 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+   box-sizing: border-box;
+ }
+
+ body {
+   margin: 0 auto;
+   width: 100%;
+   background-color: #f26a71;
+   font-family: 'Montserrat Alternates', sans-serif;
+ }
+
+ h1 {
+   font-weight: bolder;
+   color: white;
+   font-size: 2em;
+ }
+
+h2 {
+  font-weight: bold;
+  color: white;
+  font-size: 1.5em;
+}
+
+h3, h4 {
+  font-weight: normal;
+  color: white;
+  font-size: 1.25em;
+}
+
+p, a {
+  font-weight: lighter;
+  color: white;
+  font-size: 1em;
+}
+/*
+.open {
+  font-weight: lighter;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+
+/*
+<span class="open" onclick="openNav();">&#9776;</span>
+<span class="openStart" onclick="openNavStart();">&#9776;</span>
+
+var off = function() {
+    document.getElementById("overlay").style.height = "0%";
+		clearClick();
+}
+
+// Menu Functions
+var openNav = function() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+var closeNav = function() {
+    document.getElementById("myNav").style.height = "0%";
+}
+
+// Opening Function
+var onStart = function() {
+    document.getElementById("overlay-open").style.height = "0%";
+}
