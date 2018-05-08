@@ -17,13 +17,15 @@ class SessionController < ApplicationController
     session.destroy
     redirect_to '/'
   end
+
   def signup # take to the view with the same file name 
   end
+
   def signupdetails
     @user = User.new
     @user.username = params[:username]
     @user.surname = params[:surname]
-    @user.github_username = params[:github_username]
+    @user.github_username = params[:github]
     @user.email = params[:email]
     @user.password = params[:password]
     if @user.save
@@ -33,8 +35,10 @@ class SessionController < ApplicationController
         redirect_to '/signup'
     end
   end
+
   def details
   end
+  
   def create
     redirect_to ('/')
   end
