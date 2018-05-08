@@ -9,14 +9,13 @@ class PagesController < ApplicationController
   end
 
   def create
-    #Run the below commands after login/sign up methods are merged
-
+    # if user = current_user
     # user = User.find(params[:id])
-    # user.new
     # user.summary = params[:summary]
     # user.goals = params[:goals]
     # user.employment_status = params[:status]
     # user.save
+    # end
     redirect_to("/profile")
   end
 end
