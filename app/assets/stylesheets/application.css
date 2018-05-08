@@ -21,14 +21,17 @@
  body {
    margin: 0 auto;
    width: 100%;
-   background-color: #f26a71;
-   font-family: 'Montserrat Alternates', sans-serif;
+   background-color: #f46e74;
+   font-family: 'Overpass Mono', monospace;
  }
 
  h1 {
-   font-weight: bolder;
-   color: white;
-   font-size: 2em;
+   font-family: 'Monofett', cursive;
+   font-size: 3em;
+}
+
+ header {
+  text-align: right;
  }
 
 h2 {
@@ -47,7 +50,65 @@ p, a {
   font-weight: lighter;
   color: white;
   font-size: 1em;
+  text-decoration: none;
 }
+
+label {
+  color: white;
+}
+
+input {
+  color: grey;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+   background-image: url("public/keyboard2.jpeg");
+   background-repeat: repeat-x;
+   width: 100%;
+   height: 30%;
+ }
+
+ .level {
+   height: 200px;
+   width: 80%;
+   border: 1px solid black;
+   display: flex;
+   justify-content: space-around;
+   flex-direction: row;
+ }
+
+ .event-left {
+   height: 100px;
+   width: 30%;
+   margin: auto 0;
+   display: flex;
+   justify-content: center;
+   border: 1px solid black;
+ }
+
+ .event-right {
+   height: 100px;
+   width: 30%;
+   margin: auto 0;
+   display: flex;
+   justify-content: center;
+   border: 1px solid black;
+ }
+
+.icon {
+  height: 34%;
+  width: 10%;
+  margin: auto 0;
+  border: 1px solid black;
+  display: flex;
+  border-radius: 40px;
+
+}
+
 /*
 .open {
   font-weight: lighter;
