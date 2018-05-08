@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   post "/pages/profile_show", to: "pages#create"
 
   get "/login", to: "session#new"
+  get "/signup", to: "session#signup"
   post "/session", to: "session#create"
   delete "/session", to: "session#destroy"
+  post "/signupdetails", to: "session#signupdetails"
 end
