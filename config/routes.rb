@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   get "/events/new", to: "events#new"
-  post "/events/new", to: "events#create"
-  get "/events/:id", to: "events#show"
+  post "/events", to: "events#create"
+  get "/events", to: "events#index"
+  # get "/events/:id", to: "events#"
   delete "/events/:id", to: "events#destroy"
   get "/events/:id/edit", to: "events#edit"
   put "/events/:id", to: "events#update"

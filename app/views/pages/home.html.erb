@@ -14,7 +14,8 @@
     <li>
       <div class="level">
         <div class="event-left">
-          <form action="/events/new" method="post">
+        
+          <form action="/events/" method="post">
             <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
             <label for="">Date</label>
             <input type="date" name="date">
@@ -27,7 +28,7 @@
             <button>add event</button>
           </form> 
 
-
+         
         </div>
        <div class="icon"><div class="add">+</div></div>
         <div class="event-right"></div>
