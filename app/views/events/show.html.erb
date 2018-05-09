@@ -1,0 +1,10 @@
+<a href="/">Add new event</a>
+
+<% @events.each do |event|%>
+<h2><%= event.date%></h2>
+<h2><%= event.event_name%></h2>
+<h2><%= event.description%></h2>
+<h2><%= event.icon_url%></h2>
+<a href="/events/<%= event.id%>/edit">edit</a>
+<%end%>
+
