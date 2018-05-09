@@ -1,19 +1,25 @@
-<a href="/">Add new event</a>
+<h1>My Dev Journey Timeline</h1>
 
-<% @events.each do |event|%>
-<h2><%= event.date%></h2>
-<h2><%= event.event_name%></h2>
-<h2><%= event.description%></h2>
-<h2><%= event.icon_url%></h2>
-<a href="/events/<%= event.id%>/edit">edit</a>
+<h2><a href="/">Add new event</a></h2>
 
 
-<form action="/events/<%= event.id %>" method="post">
-  <input type="hidden" name="_method" value="delete">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <button>delete</button>
-</form>
+<section class="timeline">
+  <% @events.each do |event|%>
+    <div class="level">
 
-<%end%>
+      <div class="event-left">
+        <p><%= event.date%><br> <%= event.event_name%><br> <%= event.description%></p>
+        <a href="/events/<%= event.id%>/edit">Edit...</a>
+        <form action="/events/<%= event.id %>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+          <button>Delete</button>
+      </div>
+      <div class="icon"><%= event.icon_url%></div>
 
 
+
+      </form>
+    </div>
+  <%end%>
+</section>
