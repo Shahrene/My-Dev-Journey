@@ -14,7 +14,7 @@
   <label for="">Employment Status</label>
   <textarea name="status"></textarea>
 
-  <button>Update my details</button>
+  <button>Create profile</button>
 </form>
 <%else%>
 
@@ -26,5 +26,9 @@
 <h4>My github user name: <%= current_user.github_username %></h4>
 <h4>My current employment status: <%= current_user.employment_status %></h4>
 
-<button>Edit Profile</button>
+<form action="/profile/<%= current_user.id %>/edit" method="get"> 
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <button>Edit Profile</button>
+</form>
+
 <% end %>

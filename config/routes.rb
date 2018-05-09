@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get "/profile", to: "pages#profile"
   post "/profile", to: "pages#create"
   get "/profile/:id", to: "pages#profile"
+  get "/profile/:id/edit", to: "pages#edit"
+  put "/profile/:id", to: "pages#update"
 
   get "/login", to: "session#new"
   # post "/login", to: "session#create"

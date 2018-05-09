@@ -24,4 +24,17 @@ class PagesController < ApplicationController
   def show
     user = User.find_by(id: params[:user_id])
   end
+
+  def edit
+    user = User.find_by(id: params[:user_id])
+  end
+
+  def update
+    user = User.find_by(id: params[:user_id])
+    user.summary = params[:summary]
+    user.goals = params[:goals]
+    user.employment_status = params[:status]
+    user.save
+    redirect_to("/profile")
+  end
 end
