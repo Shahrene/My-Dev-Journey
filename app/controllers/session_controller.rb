@@ -3,7 +3,8 @@ class SessionController < ApplicationController
   end
   def login
     user = User.find_by(email: params[:email])
-    redirect_to '/'
+    # redirect_to '/'
+    raise "sdef"
     if user && user.authenticate(params[:password])
         session[:user_id] = user.id
         redirect_to '/'
@@ -13,10 +14,9 @@ class SessionController < ApplicationController
   end
 
   def destroy
-    session = Session.find(params[:id])
-    session.destroy
-    redirect_to '/'
-  end
+    session[:user_id] = nil
+    redirect_to '/login'
+end
 
   def signup # take to the view with the same file name 
   end
