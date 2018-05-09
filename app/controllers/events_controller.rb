@@ -1,10 +1,10 @@
 class EventsController < ApplicationController
-  def create
-    redirect_to "/"
+  def new
   end
 
-  def new
-    @event = event.new
+  def create
+    @event = Event.new
+    @event.user_id = session[:user_id]
     @event.date = params[:date]
     @event.event_name = params[:event_name]
     @event.description = params[:description]
