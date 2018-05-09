@@ -1,0 +1,11 @@
+
+<form action="/events/new" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="">Date</label>
+  <input type="date" name="date">
+  <label for="">Event name:</label>
+  <input type="text" name="name">
+  <label for="description"></label>
+  <textarea name="description"></textarea>
+  <button>add event</button>
+</form> 
