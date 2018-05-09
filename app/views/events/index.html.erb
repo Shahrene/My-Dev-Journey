@@ -6,5 +6,14 @@
 <h2><%= event.description%></h2>
 <h2><%= event.icon_url%></h2>
 <a href="/events/<%= event.id%>/edit">edit</a>
+
+
+<form action="/events/<%= event.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <button>delete</button>
+</form>
+
 <%end%>
+
 

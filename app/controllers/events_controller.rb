@@ -10,9 +10,9 @@ class EventsController < ApplicationController
     @event.description = params[:description]
     @event.icon_url = params[:icon_url]
     @event.save
-    redirect_to "/events/#{@item.id}/"
+    redirect_to "/events"
   end
-  def show
+  def index
     @events = Event.where(user_id: session[:user_id])
   end
   def edit
@@ -26,6 +26,11 @@ class EventsController < ApplicationController
     @event.description = params[:description]
     @event.icon_url = params[:icon_url]
     @event.save
+    redirect_to '/events'
+  end
+  def destroy
+    @event = Event.find(params[:id])
+    @event.destroy
     redirect_to '/events'
   end
 end
