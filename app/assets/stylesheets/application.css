@@ -22,6 +22,9 @@
    margin: 0 auto;
    width: 100%;
    background-color: #f46e74;
+
+   background-position: center center, center top;
+   background-repeat: repeat, no-repeat;
    font-family: 'Overpass Mono', monospace;
  }
 
@@ -40,7 +43,7 @@ h2 {
   font-size: 1.5em;
 }
 
-h3, h4 {
+h3, h4, h5 {
   font-weight: normal;
   color: white;
   font-size: 1.25em;
@@ -58,7 +61,32 @@ label {
 }
 
 input {
-  color: grey;
+  text-align: center;
+  color: #6e6e72;
+  width: 38%;
+  height: 1.25em;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+  border: 1px solid white;
+  border-radius: 4px;
+  box-shadow: 3px 3px 5px 0px rgba(8, 96, 140, 0.75);
+}
+
+button {
+  cursor: pointer;
+  background-color: white;
+  color: #47474c;
+  height: 1.5em;
+  font-size: 1em;
+  border: 1px solid #c2ccd1;
+  border-radius: 4px;
+  box-shadow: 3px 3px 5px 0px rgba(8, 96, 140, 0.75);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: lightgrey;
 }
 
 li {
@@ -66,15 +94,14 @@ li {
 }
 
 .container {
-   background-image: url("public/keyboard2.jpeg");
-   background-repeat: repeat-x;
+   background-image: url('app/assets/images/keyboard2.jpeg');
    width: 100%;
-   height: 30%;
+   height: 100px;
  }
 
  .level {
-   height: 200px;
-   width: 80%;
+   height: 250px;
+   width: 90%;
    border: 1px solid black;
    display: flex;
    justify-content: space-around;
@@ -82,8 +109,8 @@ li {
  }
 
  .event-left {
-   height: 100px;
-   width: 30%;
+   height: 220px;
+   width: 40%;
    margin: auto 0;
    display: flex;
    justify-content: center;
@@ -91,8 +118,8 @@ li {
  }
 
  .event-right {
-   height: 100px;
-   width: 30%;
+   height: 220px;
+   width: 40%;
    margin: auto 0;
    display: flex;
    justify-content: center;
@@ -100,13 +127,20 @@ li {
  }
 
 .icon {
-  height: 34%;
-  width: 10%;
+  height: 60px;
+  width: 60px;
   margin: auto 0;
-  border: 1px solid black;
   display: flex;
   border-radius: 40px;
+  background-color: #47474c;
+}
 
+.add {
+  margin: 0 auto;
+  width: 60%;
+  margin-top: -18px;
+  font-size: 4em;
+  color: #dee0e5;
 }
 
 /*
