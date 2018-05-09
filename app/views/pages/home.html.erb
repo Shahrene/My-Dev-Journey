@@ -1,77 +1,41 @@
-<section class="container">
-  <div class="banner">
-    <h1>My Dev Journey Timeline</h1>
+<section class="banner">
+    <h1>My Dev Journey</h1>
+</section>
+  <div class="logoutform">
+
+      <form class="" action="/session" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="hidden" name="_method" value="delete">
+        <button>Logout</button>
+      </form>
+
   </div>
-  <form class="" action="/session" method="post">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-    <input type="hidden" name="_method" value="delete">
-    <button>Logout</button>
-  </form>
-</section>
 
-<section class="timeline">
-  <ul>
-    <li>
-      <div class="level">
-        <div class="event-left">
-        
-          <form action="/events/" method="post">
-            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-            <label for="">Date</label>
-            <input type="date" name="date">
-            <label for="">Event name:</label>
-            <input placeholder="add event name" type="text" name="event_name">
-            <label for="description">Description:</label>
-            <textarea placeholder="add event description" rows="8" cols="80" name="description"></textarea>
-            <label for="icon">Icon:</label>
-            <input name="icon_url"type="text">
-            <button>add event</button>
-          </form> 
+  <div class="bghome">
+  
+    <section class="eventform">
+              <form action="/events/" method="post">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                  <table>
+                    <tr>
+                      <td><label for="">Date</label></td>
+                      <td><input type="date" name="date"></td>
+                    </tr>
+                    <tr>
+                      <td><label for="">Event Name</label></td>
+                      <td><input placeholder="add event name" type="text" name="event_name"></td>
+                    </tr>
+                    <tr>
+                      <td><label for="description">Description</label></td>
+                      <td><textarea placeholder="add event description" rows="8" cols="80" name="description"></textarea></td>
+                    </tr>
+                    <tr>
+                      <td><label for="icon">Icon</label></td>
+                      <td><input name="icon_url"type="text"></td>
+                    </tr>
+                  </table>
+                <button>Add Event</button>
+              </form>
+    </section>
 
-         
-        </div>
-       <div class="icon"><div class="add">+</div></div>
-        <div class="event-right"></div>
-      </div>
-    </li>
-    <li>
-      <div class="level">
-        <div class="event-left"></div>
-        <div class="icon"><div class="add">+</div></div>
-        <div class="event-right">
-          <form class="" action="index.html" method="post">
-            <input type="date" name="" value=""> <label for="">Date</label>
-            <label for="event">Event<textarea name="name" rows="8" cols="80"></textarea></label>
-            <button>Save</button>
-          </form>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="level">
-        <div class="event-left">
-          <form class="" action="index.html" method="post">
-            <input type="date" name="" value=""> <label for="">Date</label>
-            <label for="event">Event<textarea name="name" rows="8" cols="80"></textarea></label>
-            <button>Save</button>
-          </form>
-        </div>
-        <div class="icon"><div class="add">+</div></div>
-        <div class="event-right"></div>
-      </div>
-    </li>
-    <li>
-      <div class="level">
-        <div class="event-left"></div>
-        <div class="icon"><div class="add">+</div></div>
-        <div class="event-right">
-          <form class="" action="index.html" method="post">
-            <input type="date" name="" value=""> <label for="">Date</label>
-            <label for="event">Event<textarea name="name" rows="8" cols="80"></textarea></label>
-            <button>Save</button>
-          </form>
-        </div>
-      </div>
-    </li>
-  </ul>
-</section>
+  </div>

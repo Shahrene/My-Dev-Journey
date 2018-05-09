@@ -22,9 +22,6 @@
    margin: 0 auto;
    width: 100%;
    background-color: #f46e74;
-
-   background-position: center center, center top;
-   background-repeat: repeat, no-repeat;
    font-family: 'Overpass Mono', monospace;
  }
 
@@ -39,25 +36,29 @@
 
 h2 {
   font-weight: bold;
-  color: white;
+  color: black;
   font-size: 1.5em;
 }
 
 h3, h4, h5 {
   font-weight: normal;
-  color: white;
+  color: black;
   font-size: 1.25em;
 }
 
 p, a {
   font-weight: lighter;
-  color: white;
+  color: black;
   font-size: 1em;
   text-decoration: none;
 }
 
+a:hover {
+  font-weight: bolder;
+}
+
 label {
-  color: white;
+  color: black;
 }
 
 input {
@@ -66,7 +67,7 @@ input {
   width: 38%;
   height: 1.25em;
   margin-bottom: 15px;
-  font-size: 1.8em;
+  font-size: 1em;
   border: 1px solid white;
   border-radius: 4px;
   box-shadow: 3px 3px 5px 0px rgba(8, 96, 140, 0.75);
@@ -93,11 +94,23 @@ li {
   list-style-type: none;
 }
 
-.container {
-   background-image: url('app/assets/images/keyboard2.jpeg');
-   width: 100%;
-   height: 100px;
- }
+.eventform {
+  height: 300px;
+  width: 100%;
+  margin: auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.bghome {
+  background-image: url(<%= image_tag"create.jpeg" %>);
+  background-position: center;
+  z-index: 1;
+
+}
+
 
  .level {
    height: 250px;
@@ -109,11 +122,12 @@ li {
  }
 
  .event-left {
-   height: 220px;
+   overflow: hidden;
+   height: 200px;
    width: 40%;
    margin: auto 0;
    display: flex;
-   justify-content: center;
+   text-align: left;
    border: 1px solid black;
  }
 
