@@ -1,5 +1,7 @@
 <h1>My User Profile<h1>
+
 <%if current_user.summary == nil %>
+
 <h1>Create your profile</h1>
 
 <form action="/profile" method="post">
@@ -16,15 +18,17 @@
 
   <button>Create profile</button>
 </form>
+
 <%else%>
 
 <h2><%= current_user.username %>
+
 <%= current_user.surname %></h2>
-<h4>My email address: <%= current_user.email %></h4>
-<h4>My summary: <%= current_user.summary %></h4>
-<h4>My goals: <%= current_user.goals %></h4>
-<h4>My github user name: <%= current_user.github_username %></h4>
-<h4>My current employment status: <%= current_user.employment_status %></h4>
+<p>My email address: <strong><%= current_user.email %></p></strong>
+<p>My summary: <strong><%= current_user.summary %></p></strong>
+<p>My goals: <strong><%= current_user.goals %></p></strong>
+<p>My github user name: <strong><%= current_user.github_username %></p></strong>
+<p>My current employment status: <strong><%= current_user.employment_status %></p></strong>
 
 <form action="/profile/<%= current_user.id %>/edit" method="get"> 
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
