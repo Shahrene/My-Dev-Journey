@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   put "/profile/:id", to: "pages#update"
 
   get "/login", to: "session#new"
-  # post "/login", to: "session#create"
+
   get "/signup", to: "session#signup"
   post "/session", to: "session#create"
   delete "/session", to: "session#destroy"

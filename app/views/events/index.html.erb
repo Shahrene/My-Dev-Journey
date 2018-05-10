@@ -15,6 +15,7 @@
           <h3><span class="cd-timeline__date"></span><h3><br>
             <h3><%= event.date%> <br> <%= event.event_name%></h3>
             <p><%= event.description%></p>
+            <img src="<%= event.icon_url%>" alt="" height="50px">
               <a href="#0" class="cd-timeline__read-more">Read more</a>
               <a href="/events/<%= event.id%>/edit">Edit...</a><br>
           <form action="/events/<%= event.id %>" method="post">
