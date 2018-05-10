@@ -1,10 +1,9 @@
 class SessionController < ApplicationController
   def new
+  
   end
-  def login
+  def create
     user = User.find_by(email: params[:email])
-    # redirect_to '/'
-    raise "sdef"
     if user && user.authenticate(params[:password])
         session[:user_id] = user.id
         redirect_to '/'
@@ -39,7 +38,5 @@ end
   def details
   end
 
-  def create
-    redirect_to ('/')
-  end
+  
 end
