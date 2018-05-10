@@ -1,5 +1,15 @@
 <h1>My Dev Journey Timeline</h1>
 
+<div class="logoutform">
+
+    <form class="" action="/session" method="post">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <input type="hidden" name="_method" value="delete">
+      <button>Logout</button>
+    </form>
+
+</div>
+
 <section class="timeline js-timeline">
   <% @events.each do |event|%>
     <div class="cd-timeline__container">
