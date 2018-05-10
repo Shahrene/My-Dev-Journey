@@ -11,6 +11,13 @@
 
   </div>
 
+
+  <div class="bghome">
+  <% @event && @event.errors.full_messages.each do |message| %>
+    <p><%= message %></p>
+<% end %>
+  
+
     <section class="eventform">
               <form action="/events/" method="post">
                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
