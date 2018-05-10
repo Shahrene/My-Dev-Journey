@@ -61,7 +61,6 @@ label {
 input {
   text-align: center;
   color: #6e6e72;
-  width: 40%;
   height: 1.25em;
   margin-bottom: 15px;
   font-size: 1em;
@@ -97,23 +96,18 @@ button:hover {
   align-items: center;
 }
 
-.signupform {
+.signupform, .profile-enter, .profile-show, .profile-update{
   height: 400px;
   width: 100%;
   margin: auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: right;
 }
 
-.signup tr td input {
-  width: 90%;
-}
 
-.signup table {
-  width: 100%;
-  align-content: center;
-}
+
 
 -------------------------------- */
 @media only screen and (min-width: 1170px) {
