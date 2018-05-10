@@ -1,15 +1,25 @@
-<form action="/profile/<%= current_user.id %>" method="post">
-  <input type="hidden" name="_method" value="put">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="user_id" value="<%= current_user.id %>">
-  <label for="">Summary of who you are</label>
-  <textarea name="summary"></textarea>
 
-  <label for="">My Goals</label>
-  <textarea name="goals"></textarea>
+<div class="profile-update">
+  <form action="/profile/<%= current_user.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="user_id" value="<%= current_user.id %>">
 
-  <label for="">Employment Status</label>
-  <textarea name="status"></textarea>
-  
-  <button>update</button>
-</form>
+      <table>
+        <tr>
+          <td><label for="">Summary Of Who You Are</label></td>
+          <td><textarea rows="8" cols="70" name="summary"></textarea></td>
+        </tr>
+        <tr>
+          <td><label for="">My Goals</label></td>
+          <td><textarea rows="8" cols="70" name="goals"></textarea></td>
+        </tr>
+        <tr>
+          <td><label for="">Employment Status</label></td>
+          <td><textarea rows="2" cols="70" name="status"></textarea></td>
+        </tr>
+      </table>
+
+    <button>Update</button>
+  </form>
+</div>
