@@ -28,7 +28,7 @@
    color: #0766b5;
  }
 
- h1 {
+h1 {
    font-family: "Open Sans", sans-serif;
    font-weight: bold;
 }
@@ -61,7 +61,7 @@ label {
 input {
   text-align: center;
   color: #6e6e72;
-  width: 38%;
+  width: 40%;
   height: 1.25em;
   margin-bottom: 15px;
   font-size: 1em;
@@ -95,14 +95,24 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 0;
 }
 
-.bghome {
-  background-image: url(<%= image_tag"create.jpeg" %>);
-  background-position: center;
-  z-index: 1;
+.signupform {
+  height: 400px;
+  width: 100%;
+  margin: auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.signup tr td input {
+  width: 90%;
+}
+
+.signup table {
+  width: 100%;
+  align-content: center;
 }
 
 -------------------------------- */

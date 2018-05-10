@@ -1,27 +1,33 @@
 <h1>Sign up</h1>
-<form action="/signupdetails" method="post">
-<input type="hidden"name="authenticity_token" value="<%= form_authenticity_token%>">
-    <div>
-        <label for="">Name: </label>
-        <input name="username" type="text" placeholder="Your name..">
-    </div>
-     <div>
-        <label for="">Surname: </label>
-        <input name="surname" type="text" placeholder="Your surname..">
-    </div>
-    <div>
-        <label for="">Github username: </label>
-        <input type="text" name="github" id="" placeholder="Your github username..">
-    </div>
-    <div>
-        <label for="">Email: </label>
-        <input name="email" type="text" placeholder="Your email..">
-    </div>
-    <div>
-        <label for="">Password: </label>
-        <input name="password" type="password" placeholder="Your password..">
-    </div>
+<div class="signupform">
+
+ <form action="/signupdetails" method="post">
+  <input type="hidden"name="authenticity_token" value="<%= form_authenticity_token%>">
+      <table>
+        <tr>
+          <td><label for="">Name </label></td>
+          <td><input name="username" type="text" placeholder="Your Name.."></td>
+        </tr>
+        <tr>
+          <td><label for="">Surname</label></td>
+          <td><input name="surname" type="text" placeholder="Your Surname.."></td>
+        </tr>
+        <tr>
+          <td><label for="">Github Username </label></td>
+          <td><input type="text" name="github" placeholder="Your Github Username.."></td>
+        </tr>
+        <tr>
+          <td><label for="">Email </label></td>
+          <td><input name="email" type="text" placeholder="Your email.."></td>
+        </tr>
+        <tr>
+          <td><label for="">Password </label></td>
+          <td><input name="password" type="password" placeholder="Your password.."></td>
+        </tr>
+      </table>
+
     <button>Sign up</button>
-    <h5>Do you have an account?</h5>
-    <a href="/login">Login</a>
+    <h5>Do you have an account?  <a href="/login">Login</a> </h5>
+
  </form>
+</div>
