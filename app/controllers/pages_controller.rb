@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
   def home
+    events = Event.where(user_id: session[:user_id])
+    @sorted = events.sort_by {|event| event.date}
   end
 
   def about
@@ -10,7 +12,6 @@ class PagesController < ApplicationController
     user.summary = params[:summary]
     user.goals = params[:goals]
     user.employment_status = params[:status]
-
     if user.save
       redirect_to "/profile/#{user.id}"
     else

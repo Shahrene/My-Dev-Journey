@@ -1,13 +1,30 @@
+<% @event && @event.errors.full_messages.each do |message| %>
+  <p><%= message %></p>
+<% end %>
 
-<form action="/events/new" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <label for="">Date:</label>
-  <input type="date" name="date">
-  <label for="">Event name:</label>
-  <input type="text" name="name">
-  <label for="description">Description:</label>
-  <textarea name="description"></textarea>
-  <label for="icon_url">Icon url:</label>
-  <input type="text" name="icon_url">
-  <button>add event</button>
-</form> 
+<section class="eventform">
+  <form action="/events" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <table>
+        <tr>
+          <td><label for="">Date</label></td>
+          <td><input type="date" name="date"></td>
+        </tr>
+        <tr>
+          <td><label for="">Event Name</label></td>
+          <td><input placeholder="add event name" type="text" name="event_name"></td>
+        </tr>
+        <tr>
+          <td><label for="description">Description</label></td>
+          <td><textarea placeholder="add event description" rows="8" cols="80" name="description"></textarea></td>
+        </tr>
+        <tr>
+          <td><a><label for="icon">Icon</label></td>
+          <td><input name="icon_url"type="text"></td>
+        </tr>
+      </table>
+    <button class="add-event-btn">Add Event</button>
+  </form>
+</section>
+
+<a href="/">View my current Timeline</a>

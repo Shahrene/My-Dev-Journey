@@ -11,11 +11,10 @@ class EventsController < ApplicationController
     @event.event_name = params[:event_name]
     @event.description = params[:description]
     @event.icon_url = params[:icon_url]
-
     if @event.save
-      redirect_to ("/events")
+      redirect_to('/events')
     else
-      redirect_to "/"
+      render :new
     end
 
     # @event.save
@@ -23,8 +22,6 @@ class EventsController < ApplicationController
   end
 
   def index
-    events = Event.where(user_id: session[:user_id])
-    @sorted = events.sort_by { |event| event.date }
   end
 
   def edit
