@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  protect_from_forgery except: ["api_destroy"]
+
   def new
   end
 
@@ -21,7 +23,7 @@ class EventsController < ApplicationController
 
   def index
   end
- 
+
   def edit
     @event = Event.find(params[:id])
   end
@@ -34,12 +36,18 @@ class EventsController < ApplicationController
     @event.description = params[:description]
     @event.icon_url = params[:icon_url]
     @event.save
-    redirect_to '/events'
+    redirect_to "/events"
   end
 
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
-    redirect_to '/events'
+    redirect_to "/events"
+  end
+
+  def api_destroy
+    @event = Event.find(params[:id])
+    @event.destroy
+    render json: {info: "well done"}
   end
 end

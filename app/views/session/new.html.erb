@@ -1,11 +1,13 @@
-<div>
+
+<h2>Login</h2>
+<div class="loginform">
   <form action="/session" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
-    <label for="">email</label>
+    <label for="">Email</label>
     <input name="email" type="text">
-    <label for="">password</label>
+    <label for="">Password</label>
     <input name="password" type="password">
-    <button>click to login</button>
+    <button>Click To Login</button>
     <p>If you do not have an account, click on <a href="/signup">Sign Up</a></p>
   </form>
 </div>
