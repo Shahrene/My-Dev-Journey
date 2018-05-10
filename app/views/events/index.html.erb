@@ -14,28 +14,32 @@
 
 
 <section class="timeline js-timeline">
-  <% @sorted.each do |event|%>
-    <div class="cd-timeline__container">
-      <div class="cd-timeline__block js-cd-block">
-        <div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
-          <%= image_tag "star_icon.png" %>
-        </div>
+  <div class="cd-timeline__container">
 
-        <div class="cd-timeline__content js-cd-content">
-          <h3><span class="cd-timeline__date"></span><h3><br>
-            <h3><%= event.date%> <br> <%= event.event_name%></h3>
-            <p><%= event.description%></p>
-            <img src="<%= event.icon_url%>" alt="" height="50px">
-              <a href="#0" class="cd-timeline__read-more">Read more</a>
-              <a href="/events/<%= event.id%>/edit">Edit...</a><br>
-          <form action="/events/<%= event.id %>" method="post">
-              <input type="hidden" name="_method" value="delete">
-              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-              <button data-event-id="<%= event.id %>" class="delete-btn">Delete</button>
-          </form>
+    <% @sorted.each do |event|%>
+        <div class="cd-timeline__block js-cd-block">
+          <div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
+            <%= image_tag "star_icon.png" %>
+          </div>
+
+          <div class="cd-timeline__content js-cd-content">
+            <h3><span class="cd-timeline__date"></span><h3><br>
+              <h3><%= event.date%> <br> <%= event.event_name%></h3>
+              <p><%= event.description%></p>
+              <img src="<%= event.icon_url%>" alt="" height="50px">
+                <a href="#0" class="cd-timeline__read-more">Read more</a>
+                <a href="/events/<%= event.id%>/edit">Edit...</a><br>
+            <form action="/events/<%= event.id %>" method="post">
+                <input type="hidden" name="_method" value="delete">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                <button>Delete</button>
+            </form>
+        </div>
       </div>
-    </div>
-  <%end%>
+
+    <%end%>
+  </div>
+
 </section>
 
 <div class="add-event-link">

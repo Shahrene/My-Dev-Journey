@@ -31,11 +31,13 @@
 h1 {
    font-family: "Open Sans", sans-serif;
    font-weight: bold;
+   text-align: center;
 }
 
 h2 {
   font-weight: bold;
   font-size: 1.5em;
+  text-align: center;
 }
 
 h3, h4, h5 {
@@ -48,6 +50,10 @@ p, a {
   color: black;
   font-size: 1em;
   text-decoration: none;
+}
+
+footer {
+  font-size: 0.8em;
 }
 
 a:hover {
@@ -96,20 +102,33 @@ button:hover {
   align-items: center;
 }
 
-.signupform, .profile-enter, .profile-show, .profile-update{
+.signupform, .profile-enter, .profile-show, .profile-update, .event-edit{
   height: 400px;
   width: 100%;
   margin: auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: right;
+
+}
+
+.profile-show {
+  height: 400px;
+  width: 46%;
+  margin-left: 26%;
+  font-size: 1em;
+  color: #2866af;
+  background-color: white;
+  border-radius: 1em;
+  padding: 1em;
+  display: flex;
+
+}
+.col-2 {
+  text-align: left;
 }
 
 
-
-
--------------------------------- */
 @media only screen and (min-width: 1170px) {
   .cd-is-hidden {
     visibility: hidden;
@@ -135,6 +154,8 @@ header a {
   border-left: 1px solid white;
 }
 
+
+/*
 @media only screen and (min-width: 1170px) {
   header {
     height: 200px;
@@ -142,6 +163,7 @@ header a {
     font-size: 1rem;
   }
 }
+*/
 
 .timeline {
   overflow: hidden;
@@ -282,6 +304,7 @@ header a {
   }
 }
 
+
 .cd-timeline__content {
   overflow: hidden;
   position: relative;
@@ -414,9 +437,9 @@ header a {
             animation: cd-bounce-2 0.6s;
   }
 }
-
+/*
 @media only screen and (min-width: 1170px) {
-  /* inverse bounce effect on even content blocks */
+  /* inverse bounce effect on even content blocks
   .cd-timeline__block:nth-child(even) .cd-timeline__content.cd-timeline__content--bounce-in {
     -webkit-animation: cd-bounce-2-inverse 0.6s;
             animation: cd-bounce-2-inverse 0.6s;
