@@ -1,13 +1,16 @@
+<% @event && @event.errors.full_messages.each do |message| %>
+  <p><%= message %></p>
+<% end %>
 
-<form action="/events/new" method="post">
+<form action="/events" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label for="">Date:</label>
-  <input type="date" name="date">
+  <input type="date" name="date"><br>
   <label for="">Event name:</label>
-  <input type="text" name="name">
+  <input type="text" name="event_name"><br>
   <label for="description">Description:</label>
-  <textarea name="description"></textarea>
+  <textarea name="description"></textarea><br>
   <label for="icon_url">Icon url:</label>
-  <input type="text" name="icon_url">
+  <input type="text" name="icon_url"><br>
   <button>add event</button>
-</form> 
+</form>

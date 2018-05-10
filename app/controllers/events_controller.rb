@@ -9,24 +9,23 @@ class EventsController < ApplicationController
     @event.event_name = params[:event_name]
     @event.description = params[:description]
     @event.icon_url = params[:icon_url]
-
     if @event.save
-     
-      redirect_to ('/events')
-  else
-      redirect_to '/'
-  end
+      redirect_to('/events')
+    else
+      render :new
+    end
 
     # @event.save
     # redirect_to "/events"
   end
+
   def index
-    events = Event.where(user_id: session[:user_id])
-    @sorted = events.sort_by {|event| event.date}
   end
+ 
   def edit
     @event = Event.find(params[:id])
   end
+
   def update
     @event = Event.find(params[:id])
     @event.user_id = session[:user_id]
@@ -37,6 +36,7 @@ class EventsController < ApplicationController
     @event.save
     redirect_to '/events'
   end
+
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
