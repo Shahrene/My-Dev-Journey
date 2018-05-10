@@ -2,21 +2,17 @@
     <h1>My Dev Journey</h1>
 </section>
   <div class="logoutform">
-
       <form class="" action="/session" method="post">
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
         <input type="hidden" name="_method" value="delete">
         <button>Logout</button>
       </form>
-
   </div>
-
 
   <div class="bghome">
   <% @event && @event.errors.full_messages.each do |message| %>
     <p><%= message %></p>
 <% end %>
-  
 
     <section class="eventform">
               <form action="/events/" method="post">
@@ -41,12 +37,7 @@
                   </table>
                 <button class="add-event-btn">Add Event</button>
               </form>
+              
     </section>
-
-
-    <script>
-      var addEventBtn = document.querySelector(".add-event-btn")
-      
-    </script>
-
+  <a href="/events">View my current Timeline</a>
   </div>

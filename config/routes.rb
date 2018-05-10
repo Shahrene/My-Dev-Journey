@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/events", to: "events#index"
   # get "/events/:id", to: "events#"
   delete "/events/:id", to: "events#destroy"
+  delete "/api/events/:id", to: "events#api_destroy"
   get "/events/:id/edit", to: "events#edit"
   put "/events/:id", to: "events#update"
 
