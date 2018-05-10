@@ -1,14 +1,30 @@
-<form action="/events/<%= @event.id %>" method="post">
-  <input type="hidden" name="_method" value="put">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <label for="">Date<%=@event.date%></label>
-  <input type="date" name="date" value="<%= @event.date%>">
-  <label for="">Event name:</label>
-  <input placeholder="add event name" type="text" name="event_name" value="<%= @event.event_name%>">
-  <label for="description">Description:</label>
-  <textarea placeholder="add event description" rows="8" cols="80" name="description"><%= @event.description%></textarea>
-  <label for="icon">Icon:</label>
-  <input name="icon_url"type="text" value="<%= @event.icon_url%>">
-  <button>update</button>
-</form>
 
+<h2>Edit Event Details</h2>
+
+<div class="event-edit">
+  <form action="/events/<%= @event.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+    <table>
+      <tr>
+        <td><label for="">Date</label></td>
+        <td><input type="date" name="date" value="<%= @event.date%>"></td>
+      </tr>
+      <tr>
+        <td><label for="">Event Name</label></td>
+        <td><input placeholder="add event name" type="text" name="event_name" value="<%= @event.event_name%>"></td>
+      </tr>
+      <tr>
+        <td><label for="description">Description</label></td>
+        <td><textarea placeholder="add event description" rows="8" cols="70" name="description"><%= @event.description%></textarea></td>
+      </tr>
+      <tr>
+       <td><label for="icon">Icon</label></td>
+       <td><input name="icon_url"type="text" value="<%= @event.icon_url%>"></td>
+      </tr>
+    </table>
+
+    <button>Update Event</button>
+  </form>
+</div>
