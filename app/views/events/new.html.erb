@@ -1,7 +1,7 @@
 <% @event && @event.errors.full_messages.each do |message| %>
   <p><%= message %></p>
 <% end %>
-
+<h2>Add a new Event</h2>
 <section class="eventform">
   <form action="/events" method="post">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -26,5 +26,3 @@
     <button class="add-event-btn">Add Event</button>
   </form>
 </section>
-
-<a href="/">View my current Timeline</a>
