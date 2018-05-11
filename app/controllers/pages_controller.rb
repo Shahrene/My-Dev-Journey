@@ -42,5 +42,4 @@ class PagesController < ApplicationController
     user.save
     redirect_to("/profile")
   end
- 
 end
