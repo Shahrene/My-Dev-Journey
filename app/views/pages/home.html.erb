@@ -28,12 +28,12 @@
               <h3><%= event.event_name%></h3>
               <p><%= event.description%></p>
               <img src="<%= event.icon_url%>" alt="" height="50px">
-              <button id="more">more...</button>
+              <a href="#" class="event-show-more">more...</a>
                 <a href="/events/<%= event.id%>/edit">Edit...</a><br>
             <form action="/events/<%= event.id %>" method="post">
                 <input type="hidden" name="_method" value="delete">
                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                <button data-event-id="<%= event.id %>">Delete</button>
+                <button data-event-id="<%= event.id %>" class="delete-event">Delete</button>
             </form>
         </div>
       </div>
@@ -55,10 +55,9 @@
   timelineSection.addEventListener('click', function(event) {
       // console.log(event.target.tagName)
     var button = event.target
-    if (button.tagName == 'BUTTON') {
-    event.preventDefault();
-    console.log(button.getAttribute('data-event-id'));
-
+    if (button.classList.contains('delete-event')) {
+      event.preventDefault();
+      console.log(button.getAttribute('data-event-id'));
         // send a request to delete
         // delete /api/events/5
         $.ajax({
@@ -83,12 +82,11 @@
 
   addNewEvent.addEventListener("click", scrollToBottom)
 
-
-
   $(document).ready(function(){
-    $("#more").click(function(){
-        $("p").toggleClass("show");
+    $(".event-show-more").click(function(event){
+      event.preventDefault();
+      $("p").toggleClass("show");
     });
-});
+  });
 
 </script>
