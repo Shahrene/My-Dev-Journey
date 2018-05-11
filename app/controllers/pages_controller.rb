@@ -1,7 +1,11 @@
 class PagesController < ApplicationController
   def home
-    events = Event.where(user_id: session[:user_id])
-    @sorted = events.sort_by {|event| event.date}
+    if logged_in?
+      events = Event.where(user_id: session[:user_id])
+      @sorted = events.sort_by { |event| event.date }
+    else
+      redirect_to "/login"
+    end
   end
 
   def about

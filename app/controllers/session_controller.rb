@@ -1,5 +1,10 @@
 class SessionController < ApplicationController
   def new
+    if logged_in?
+      redirect_to "/"
+    else
+      render :new
+    end
   end
 
   def create
