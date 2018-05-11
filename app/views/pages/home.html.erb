@@ -32,7 +32,7 @@
             <form action="/events/<%= event.id %>" method="post">
                 <input type="hidden" name="_method" value="delete">
                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                <button>Delete</button>
+                <button data-event-id="<%= event.id %>">Delete</button>
             </form>
         </div>
       </div>
@@ -43,7 +43,7 @@
 </section>
 
 <div class="add-event-link">
-<h2><a href="/">Add Event</a></h2>
+<h2><a href="/events/new">Add Event</a></h2>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -51,24 +51,25 @@
 
   var timelineSection = document.querySelector('.timeline');
 
-  var removeEventDiv = function(response) {
-    console.log('todo - remove event div');
-    console.log(event.target.getAttribute('data-event-id'));
-    event.target.getAttribute('data-event-id').delete;
-  }
-
   timelineSection.addEventListener('click', function(event) {
       event.preventDefault();
+      var button = event.target
       // console.log(event.target.tagName)
-      if (event.target.tagName == 'BUTTON') {
-        console.log(event.target.getAttribute('data-event-id'));
+      if (button.tagName == 'BUTTON') {
+        console.log(button.getAttribute('data-event-id'));
 
         // send a request to delete
         // delete /api/events/5
         $.ajax({
-          url: "/api/events/" + event.target.getAttribute('data-event-id'),
+          url: "/api/events/" + button.getAttribute('data-event-id'),
           method: 'delete'
-        }).done(removeEventDiv);
+        }).done(function(data) {
+          var $container = $(button).closest('.cd-timeline__content')
+          $container.empty().append('this event went bye bye!')
+          setTimeout(function(){
+            location.reload()
+          },3000)
+        });
       }
   })
 

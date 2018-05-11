@@ -12,7 +12,7 @@ class EventsController < ApplicationController
     @event.description = params[:description]
     @event.icon_url = params[:icon_url]
     if @event.save
-      redirect_to('/events')
+      redirect_to("/")
     else
       render :new
     end
@@ -36,13 +36,13 @@ class EventsController < ApplicationController
     @event.description = params[:description]
     @event.icon_url = params[:icon_url]
     @event.save
-    redirect_to "/events"
+    redirect_to "/"
   end
 
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
-    redirect_to "/events"
+    redirect_to "/"
   end
 
   def api_destroy
