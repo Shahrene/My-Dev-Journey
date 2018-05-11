@@ -73,4 +73,13 @@
       }
   })
 
+  var addNewEvent = document.getElementById("add-new-event")
+
+  var scrollToBottom = function(event) {
+    event.preventDefault()
+    window.scrollTo(0,document.body.scrollHeight)
+  }
+
+  addNewEvent.addEventListener("click", scrollToBottom)
+
 </script>

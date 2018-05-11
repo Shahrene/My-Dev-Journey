@@ -1,7 +1,7 @@
 <h2>Edit Event Details</h2>
 
 <div class="event-edit">
-  <form action="/events/<%= @event.id %>" method="post">
+  <form action="/events/<%= @event.id %>/edit" method="post">
     <input type="hidden" name="_method" value="put">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
