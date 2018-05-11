@@ -26,6 +26,7 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find(params[:id])
+    
   end
 
   def update
@@ -49,5 +50,8 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @event.destroy
     render json: {info: "well done"}
+  end
+  def index
+    @users = User.all
   end
 end

@@ -9,25 +9,25 @@
 </div>
 
 <h1>My Dev Journey Timeline</h1>
-
-<p>This is a timeline that outlines your journey to becoming an asipiring web developer. Add an event to your web journey so that it tells a story.</p>
+<div class="para">
+  <p>This is a timeline that outlines your journey as an asipiring web developer. Add an event to your web journey so that it tells a story.</p>
+</div>
 
 
 <section class="timeline js-timeline">
   <div class="cd-timeline__container">
-
     <% @sorted.each do |event|%>
+
         <div class="cd-timeline__block js-cd-block">
           <div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
             <%= image_tag "star_icon.png" %>
           </div>
 
           <div class="cd-timeline__content js-cd-content">
-            <h3><span class="cd-timeline__date"></span><h3><br>
-              <h3><%= event.date%> <br> <%= event.event_name%></h3>
+            <h3><%= event.date%></h3><br>
+              <h3><%= event.event_name%></h3>
               <p><%= event.description%></p>
               <img src="<%= event.icon_url%>" alt="" height="50px">
-                <a href="#0" class="cd-timeline__read-more">Read more</a>
                 <a href="/events/<%= event.id%>/edit">Edit...</a><br>
             <form action="/events/<%= event.id %>" method="post">
                 <input type="hidden" name="_method" value="delete">
@@ -52,12 +52,12 @@
   var timelineSection = document.querySelector('.timeline');
 
   timelineSection.addEventListener('click', function(event) {
-      event.preventDefault();
-      var button = event.target
       // console.log(event.target.tagName)
+      var button = event.target
       if (button.tagName == 'BUTTON') {
+        event.preventDefault();
         console.log(button.getAttribute('data-event-id'));
-        
+
         // send a request to delete
         // delete /api/events/5
         $.ajax({
@@ -83,3 +83,4 @@
   addNewEvent.addEventListener("click", scrollToBottom)
 
 </script>
+
