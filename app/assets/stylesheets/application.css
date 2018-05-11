@@ -302,8 +302,18 @@ header a {
 }
 
 .cd-timeline__content img {
-  justify-content: flex-end;
+  float: right;
 }
+
+.cd-timeline__content p {
+  max-height: 350px;
+  overflow: hidden;
+}
+
+p.show {
+  max-height: 100%;
+}
+
 
 .cd-timeline__content:after {
   /* clearfix */
@@ -403,4 +413,3 @@ header a {
     right: 122%;
     text-align: right;
   }
-
