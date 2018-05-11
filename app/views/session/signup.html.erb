@@ -1,7 +1,11 @@
 
 
-
 <h1>Sign up</h1>
+
+<% @user && @user.errors.full_messages.each do |message| %>
+<p><%= message %></p>
+<% end %>
+
 <div class="signupform">
 
  <form action="/signupdetails" method="post">
