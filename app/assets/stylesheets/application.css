@@ -123,18 +123,12 @@ button:hover {
 }
 
 .profile-show {
-  height: 400px;
-  width: 46%;
-  margin-left: 26%;
-  margin-top: 2%;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 8%;
   font-size: 1em;
   color: #2866af;
-  background-color: white;
-  border-radius: 1em;
-  padding: 1em;
   display: flex;
-  -webkit-box-shadow: 3px 3px 5px 0px rgba(130, 136, 137, 0.75), inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
-          box-shadow: 3px 3px 5px 0px rgba(130, 136, 137, 0.75), inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 
 .about-us {
@@ -145,6 +139,7 @@ button:hover {
   text-align: center;
   background-color: white;
   border-radius: 1em;
+  padding: 5px;
   display: flex;
   -webkit-box-shadow: 3px 3px 5px 0px rgba(130, 136, 137, 0.75), inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
           box-shadow: 3px 3px 5px 0px rgba(130, 136, 137, 0.75), inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
