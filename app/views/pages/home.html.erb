@@ -28,6 +28,7 @@
               <h3><%= event.event_name%></h3>
               <p><%= event.description%></p>
               <img src="<%= event.icon_url%>" alt="" height="50px">
+              <button id="more">more...</button>
                 <a href="/events/<%= event.id%>/edit">Edit...</a><br>
             <form action="/events/<%= event.id %>" method="post">
                 <input type="hidden" name="_method" value="delete">
@@ -81,6 +82,14 @@
   }
 
   addNewEvent.addEventListener("click", scrollToBottom)
+
+
+
+  $(document).ready(function(){
+    $("#more").click(function(){
+        $("p").toggleClass("show");
+    });
+});
 
 </script>
 
