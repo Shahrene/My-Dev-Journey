@@ -50,10 +50,10 @@
   var timelineSection = document.querySelector('.timeline');
 
   timelineSection.addEventListener('click', function(event) {
-      event.preventDefault();
-      var button = event.target
       // console.log(event.target.tagName)
+      var button = event.target
       if (button.tagName == 'BUTTON') {
+        event.preventDefault();
         console.log(button.getAttribute('data-event-id'));
         
         // send a request to delete
