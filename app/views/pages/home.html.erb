@@ -9,8 +9,9 @@
 </div>
 
 <h1>My Dev Journey Timeline</h1>
-
-<p>This is a timeline that outlines your journey to becoming an asipiring web developer. Add an event to your web journey so that it tells a story.</p>
+<div class="para">
+  <p>This is a timeline that outlines your journey as an asipiring web developer. Add an event to your web journey so that it tells a story.</p>
+</div>
 
 
 <section class="timeline js-timeline">
@@ -23,11 +24,10 @@
           </div>
 
           <div class="cd-timeline__content js-cd-content">
-            <h3><span class="cd-timeline__date"></span><h3><br>
-              <h3><%= event.date%> <br> <%= event.event_name%></h3>
+            <h3><%= event.date%></h3><br>
+              <h3><%= event.event_name%></h3>
               <p><%= event.description%></p>
               <img src="<%= event.icon_url%>" alt="" height="50px">
-                <a href="#0" class="cd-timeline__read-more">Read more</a>
                 <a href="/events/<%= event.id%>/edit">Edit...</a><br>
             <form action="/events/<%= event.id %>" method="post">
                 <input type="hidden" name="_method" value="delete">
@@ -62,7 +62,7 @@
       // console.log(event.target.tagName)
       if (event.target.tagName == 'BUTTON') {
         console.log(event.target.getAttribute('data-event-id'));
-        
+
         // send a request to delete
         // delete /api/events/5
         $.ajax({
