@@ -6,7 +6,7 @@ class SessionController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to "/events"
+      redirect_to "/"
     else
       render :new
     end
@@ -29,12 +29,13 @@ class SessionController < ApplicationController
     @user.password = params[:password]
     if @user.save
       session[:user_id] = @user.id
-      redirect_to ("/events")
+      redirect_to ("/")
     else
-      redirect_to "/signup"
+      render :signup
     end
   end
 
   def details
   end
+ 
 end
