@@ -1,10 +1,7 @@
 class SessionController < ApplicationController
+  skip_before_action :check_login, only: [:new, :create, :signup, :signupdetails]
+
   def new
-    if logged_in?
-      redirect_to "/"
-    else
-      render :new
-    end
   end
 
   def create
@@ -42,5 +39,4 @@ class SessionController < ApplicationController
 
   def details
   end
- 
 end
