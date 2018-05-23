@@ -10,19 +10,22 @@ This web app aims to encourage other aspiring web developers to create their per
 
 User and event details are saved in SQL database for this project.
 
-## Challenges 
+## Challenges
 The challenges of this web app are identifying the things we would like to build for the MVP (Minial Viable Product) in the days that we were given (4.5 days). The other challenges include making the AJAX functions work e.g toggle/scroll. Finally, working together as a team to communicate ideas, challenges and fix issues that come up during the project.
 
 ## Deployment
-This web app and the database are built using Ruby on Rails and they will be deployed on Heroku as a final product. 
+This web app and the database are built using Ruby on Rails and they will be deployed on Heroku as a final product.
 
 ## Technologies Used
 Some cool CSS and JavaScript tricks including expanding and collapsing boxes when content has more words than the container allows (Toggling function). Clicking on a link and jumping to a specific section on the body.
 
-## Next Steps 
+## Next Steps
 
 ### (things we have identified in the backlog)
 - Adding dropdown options to the event boxes to allow users to choose relevant icons for their event.
-- Add "forgot password" functionality for the sign up option 
+- Add "forgot password" functionality for the sign up option
 - Allow users to change theme for the timeline, for personalisation purposes
 - Allow users to export the timeline as PDF so that they can share their web development journey with others e.g recruiters, potential employers if they want to.
+
+
+![Timeline](My Dev Journey Screenshot1.png)
