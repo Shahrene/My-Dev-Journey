@@ -28,4 +28,4 @@ Some cool CSS and JavaScript tricks including expanding and collapsing boxes whe
 - Allow users to export the timeline as PDF so that they can share their web development journey with others e.g recruiters, potential employers if they want to.
 
 
-![Timeline](My Dev Journey Screenshot1.png)
+![Timeline](Screenshot1.png)
